@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		527FB00B1D5624AB0024C8E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FB00A1D5624AB0024C8E6 /* AppDelegate.swift */; };
-		527FB00D1D5624AB0024C8E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FB00C1D5624AB0024C8E6 /* ViewController.swift */; };
+		527FB00D1D5624AB0024C8E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FB00C1D5624AB0024C8E6 /* LoginViewController.swift */; };
 		527FB0101D5624AB0024C8E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 527FB00E1D5624AB0024C8E6 /* Main.storyboard */; };
 		527FB0121D5624AB0024C8E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 527FB0111D5624AB0024C8E6 /* Assets.xcassets */; };
 		527FB0151D5624AB0024C8E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 527FB0131D5624AB0024C8E6 /* LaunchScreen.storyboard */; };
 		527FB0201D5624AB0024C8E6 /* LoginMVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FB01F1D5624AB0024C8E6 /* LoginMVPTests.swift */; };
 		527FB02B1D5624AB0024C8E6 /* LoginMVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FB02A1D5624AB0024C8E6 /* LoginMVPUITests.swift */; };
+		52A6C7BE1D6C17B700C97850 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A6C7BD1D6C17B700C97850 /* LoginPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		527FB0071D5624AB0024C8E6 /* LoginMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		527FB00A1D5624AB0024C8E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		527FB00C1D5624AB0024C8E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		527FB00C1D5624AB0024C8E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		527FB00F1D5624AB0024C8E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		527FB0111D5624AB0024C8E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		527FB0141D5624AB0024C8E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		527FB0261D5624AB0024C8E6 /* LoginMVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginMVPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		527FB02A1D5624AB0024C8E6 /* LoginMVPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMVPUITests.swift; sourceTree = "<group>"; };
 		527FB02C1D5624AB0024C8E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52A6C7BD1D6C17B700C97850 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,8 @@
 		527FB0091D5624AB0024C8E6 /* LoginMVP */ = {
 			isa = PBXGroup;
 			children = (
+				52A6C7BC1D6C148100C97850 /* login */,
 				527FB00A1D5624AB0024C8E6 /* AppDelegate.swift */,
-				527FB00C1D5624AB0024C8E6 /* ViewController.swift */,
 				527FB00E1D5624AB0024C8E6 /* Main.storyboard */,
 				527FB0111D5624AB0024C8E6 /* Assets.xcassets */,
 				527FB0131D5624AB0024C8E6 /* LaunchScreen.storyboard */,
@@ -123,6 +125,15 @@
 				527FB02C1D5624AB0024C8E6 /* Info.plist */,
 			);
 			path = LoginMVPUITests;
+			sourceTree = "<group>";
+		};
+		52A6C7BC1D6C148100C97850 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				527FB00C1D5624AB0024C8E6 /* LoginViewController.swift */,
+				52A6C7BD1D6C17B700C97850 /* LoginPresenter.swift */,
+			);
+			path = login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +267,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				527FB00D1D5624AB0024C8E6 /* ViewController.swift in Sources */,
+				52A6C7BE1D6C17B700C97850 /* LoginPresenter.swift in Sources */,
+				527FB00D1D5624AB0024C8E6 /* LoginViewController.swift in Sources */,
 				527FB00B1D5624AB0024C8E6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +494,7 @@
 				527FB0311D5624AB0024C8E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		527FB0321D5624AB0024C8E6 /* Build configuration list for PBXNativeTarget "LoginMVPTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +503,7 @@
 				527FB0341D5624AB0024C8E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		527FB0351D5624AB0024C8E6 /* Build configuration list for PBXNativeTarget "LoginMVPUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +512,7 @@
 				527FB0371D5624AB0024C8E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
