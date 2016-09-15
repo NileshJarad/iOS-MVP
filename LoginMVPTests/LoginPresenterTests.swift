@@ -49,6 +49,4 @@ class LoginPresenterTests: XCTestCase {
             showSuccessMessage = true
         }
     }
-    
-    
 }
